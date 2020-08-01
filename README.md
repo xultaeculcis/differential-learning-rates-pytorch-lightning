@@ -1,12 +1,14 @@
 # Differential learning rates with Pytorch Lightning
 
-This project shows how to implement differential learning rates for transfer learning using `Pytorch Lightning`. 
+This project shows how to implement differential learning rates (also known as discriminative layer learning) for transfer learning using `Pytorch Lightning`. 
 
 It heavily relies on the approach presented by [Lucas Vazques](https://github.com/lgvaz) in the issue [#2005](https://github.com/PyTorchLightning/pytorch-lightning/issues/2005). So most of the credit goes to him :)
 
 ## How it works?
 
-You can read about differential learning rates for transfer learning in blog posts [here](https://blog.slavv.com/differential-learning-rates-59eff5209a4f) and [here](https://towardsdatascience.com/transfer-learning-using-differential-learning-rates-638455797f00).
+You can read about differential learning rates for transfer learning in this [article](https://arxiv.org/abs/1801.06146) by Jeremy Howard and Sebastian Ruder. Or in blog posts [here](https://blog.slavv.com/differential-learning-rates-59eff5209a4f) and [here](https://towardsdatascience.com/transfer-learning-using-differential-learning-rates-638455797f00). 
+
+Also getting familiar with it's implementation in [fast.ai](https://docs.fast.ai/basic_train.html#Discriminative-layer-training) can be helpful. 
 
 ## Implementation
 Basic steps needed to make differential learning rates work are as follows:
@@ -118,7 +120,7 @@ Basic steps needed to make differential learning rates work are as follows:
     ```
 
 ## Monitor the learning rates
-The code for this example contains a **TensorBoard** integration, so that you can monitor the progress and how the learing rates are changing over the course of the training session. Your learnning rate charts should look more or less like this: ![Learning rate charts](./images/lrs.png)
+The code for this example contains a **TensorBoard** integration, so that you can monitor the progress and how the learing rates are changing over the course of the training session. Your learning rate charts should look more or less like this: ![Learning rate charts](./images/lrs.png)
 
 ## Further work
 No further work for this project is planned. I might occasionally update it so that it's still compatible with **Pytorch Lightning**. 
